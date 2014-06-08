@@ -58,9 +58,9 @@
         Google Maps Markers 
     </h1>
     <div>Icons made by 
-        <a href="http://www.freepik.com" alt="Freepik.com" title="Freepik.com">Freepik</a> 
+        <a href="http://www.freepik.com" title="Freepik.com">Freepik</a> 
         from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
     </div>
-    <div id="map-canvas"/>    
+    <div id="map-canvas"></div>    
   </body>
 </html>
