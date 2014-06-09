@@ -22,27 +22,23 @@
         var bounds = new google.maps.LatLngBounds();
         
         // Sample markers
-        var markers = [
-            ['car', 47.6204674,-122.3491156],
-            ['robber', 47.2395711,-122.42874],
-            ['house', 47.5962326,-120.6614765]
-        ];
+        var markers = ${addresses};
         
         // Loop through our array of markers & place each one on the map         
         for( i = 0; i < markers.length; i++ ) {
             var icon = 'resources/car-icon.png';
-            if ('robber' === markers[i][0]) {
+            if ('robber' === markers[i].label) {
                 icon = 'resources/car-robber-icon.png';    
-            } else if ('house' == markers[i][0]) {
+            } else if ('house' == markers[i].label) {
                 icon = 'resources/house-icon.png';
             }
             
-            var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+            var position = new google.maps.LatLng(markers[i].coordinate.latitude, markers[i].coordinate.longitude);
             bounds.extend(position);
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                title: markers[i][0],
+                title: markers[i].label,
                 icon: icon
             });    
         }
@@ -57,7 +53,8 @@
     <h1>
         Google Maps Markers 
     </h1>
-    <div>Icons made by 
+    <div>
+        Icons made by 
         <a href="http://www.freepik.com" title="Freepik.com">Freepik</a> 
         from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
     </div>
