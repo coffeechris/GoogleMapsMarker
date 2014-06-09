@@ -26,11 +26,11 @@
         
         // Loop through our array of markers & place each one on the map         
         for( i = 0; i < markers.length; i++ ) {
-            var icon = 'resources/car-icon.png';
+            var icon = 'resources/blue-marker.png';
             if ('robber' === markers[i].label) {
-                icon = 'resources/car-robber-icon.png';    
+                icon = 'resources/green-marker.png';    
             } else if ('house' == markers[i].label) {
-                icon = 'resources/house-icon.png';
+                icon = 'resources/red-marker.png';
             }
             
             var position = new google.maps.LatLng(markers[i].coordinate.latitude, markers[i].coordinate.longitude);
