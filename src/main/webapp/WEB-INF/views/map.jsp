@@ -38,7 +38,7 @@
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                title: markers[i].label,
+                title: markers[i].streetAddress,
                 icon: icon
             });    
         }
