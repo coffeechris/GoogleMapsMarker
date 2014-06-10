@@ -2,7 +2,7 @@
 <%@ page session="false" %>
 <html>
   <head>
-    <title>Google Maps Markers</title>
+    <title>Google Maps Markers: ${addressKey}</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <style type="text/css">
       html { height: 100% }
@@ -51,7 +51,7 @@
   </head>
   <body>
     <h1>
-        Google Maps Markers 
+        Google Maps Markers: ${addressKey} 
     </h1>
     <div>
         Icons made by 

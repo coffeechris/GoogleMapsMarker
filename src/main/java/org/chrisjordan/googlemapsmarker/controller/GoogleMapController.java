@@ -34,6 +34,7 @@ public class GoogleMapController {
         }
 
         model.addAttribute("key", key);
+        model.addAttribute("addressKey", addressKey);
         model.addAttribute("addresses", OBJECT_MAPPER.writeValueAsString(addressDao.getAddresses(addressKey)));
         return "map";
     }
